@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Leroy | About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[999] flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-500">
+            <a href="index.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Homepage</a>
+            <a href="videography.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Videography</a>
+            <a href="photography.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Photography</a>
+            <a href="about.html" class="text-sm tracking-[0.4em] uppercase font-bold" onclick="toggleMenu()">About Me</a>
+            <a href="testimonials.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Testimonials</a>
+            <a href="contact.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Contact</a>
+        </div>
+
+<body class="bg-white text-gray-900">
+
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
+            <div class="flex items-center space-x-5">
+                <img src="Assets/header_logo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
+                <a href="index.html" class="font-medium tracking-[0.3em]">Louis Leroy</a>
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-light hover:font-bold transition-all">Homepage</a>
+                <a href="videography.html" class="font-light hover:font-bold transition-all">Videography</a>
+                <a href="photography.html" class="font-light hover:font-bold transition-all">Photography</a>
+                <a href="about.html" class="font-bold">About Me</a>
+                <a href="testimonials.html" class="font-light hover:font-bold transition-all">Testimonials</a>
+                <a href="contact.html" class="font-light hover:font-bold transition-all">Contact</a>
+            </div>
+
+<div class="md:hidden cursor-pointer z-[1000] flex flex-col gap-1.5 w-5" onclick="toggleMenu()">                <div id="line1" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+                <div id="line2" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <main class="min-h-screen flex items-center justify-center py-32 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+            
+            <div class="relative w-full aspect-[4/5] md:aspect-square overflow-hidden bg-gray-100">
+                <img src="Assets/images/about-me.jpg" 
+                     alt="Louis Leroy" 
+                     class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000 ease-in-out">
+            </div>
+
+            <div class="flex flex-col justify-center">
+                <h1 class="text-4xl md:text-5xl font-light uppercase tracking-[0.25em] mb-6 font-heading text-gray-900">
+                    About Me
+                </h1>
+
+                <div class="w-12 h-[1px] bg-gray-800 mb-8"></div>
+
+                <div class="space-y-6 text-gray-600 font-light leading-relaxed text-sm md:text-[15px] text-justify md:text-left">
+                    <p>My name is Louis, I’m a traveller from Belgium currently based in Byron Bay.</p>
+                    <p>What I like most about videography is meeting and collaborating with passionate people. I enjoy creating authentic and visually engaging content, telling stories that highlight people, places, and experiences.</p>
+                    <p>I hold a Master’s degree in Communications and have over four years of experience as a Communications Officer in Brussels. This background gives me a strategic approach to video production. Whether it’s for social media, a website, or a promotional project, I take the time to discuss and shape each project carefully. Ensuring it fits into your communication and marketing strategy.</p>
+                </div>
+
+                <div class="mt-12 w-full text-right">
+                    <a href="contact.html" class="group relative inline-block text-[10px] uppercase tracking-[0.3em] font-medium text-gray-900 pb-2">
+                        Contact me
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] overflow-hidden">
+                            <span class="absolute inset-0 w-full h-full bg-gray-900 transform transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
+                            <span class="absolute inset-0 w-full h-full bg-gray-300 transform -translate-x-full transition-transform duration-500 ease-in-out group-hover:translate-x-0"></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 text-center text-[9px] uppercase tracking-widest text-gray-400 border-t border-gray-100">
+        &copy; 2024 Louis Leroy. All rights reserved.
+    </footer>
+
+    <script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const l1 = document.getElementById('line1');
+        const l2 = document.getElementById('line2');
+        
+        menu.classList.toggle('opacity-0');
+        menu.classList.toggle('pointer-events-none');
+        
+        l1.classList.toggle('rotate-45');
+        l1.classList.toggle('translate-y-[4px]'); 
+        l2.classList.toggle('-rotate-45');
+        l2.classList.toggle('-translate-y-[3px]');
+
+        document.body.style.overflow = (!menu.classList.contains('opacity-0')) ? 'hidden' : 'auto';
+    }
+    </script>
+
+</body>
+</html>

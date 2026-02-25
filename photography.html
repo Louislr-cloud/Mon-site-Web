@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Leroy | Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Animation d'entrée globale (douce) */
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* CONFIGURATION MASONRY (Déstructuré mais équilibré) */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        
+        .masonry-item {
+            break-inside: avoid; /* Empêche de couper une image entre deux colonnes */
+            margin-bottom: 2rem; /* Espacement vertical constant */
+            position: relative;
+            display: block;
+        }
+
+        
+    </style>
+</head>
+
+<body class="text-gray-900 flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="fixed w-full z-50 bg-white border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
+            <!-- Logo + Nom -->
+            <div class="flex items-center space-x-5">
+        <img src="Assets/header_logo.png" alt="Logo" id="header-logo" class="h-10 md:h-12 w-auto object-contain transition-all">
+        <a href="index.html" class="font-medium tracking-[0.3em]">Louis Leroy</a>
+    </div>
+
+            <!-- Menu Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-light hover:font-bold transition-all duration-200">Homepage</a>
+                <a href="videography.html" class="font-light hover:font-bold transition-all duration-200">Videography</a>
+                <a href="photography.html" class="font-bold">Photography</a>
+                <a href="about.html" class="font-light hover:font-bold transition-all duration-200">About Me</a>
+                <a href="testimonials.html" class="font-light hover:font-bold transition-all duration-200">Testimonials</a>
+                <a href="contact.html" class="font-light hover:font-bold transition-all duration-200">Contact</a>
+            </div>
+
+            <!-- Menu Mobile Burger -->
+            <div class="md:hidden cursor-pointer z-[110] space-y-1.5" onclick="toggleMenu()">
+    <div id="line1" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+    <div id="line2" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+</div>
+        </nav>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[105] flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-500">
+    <a href="index.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Homepage</a>
+    <a href="videography.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Videography</a>
+    <a href="photography.html" class="text-sm tracking-[0.4em] uppercase font-bold" onclick="toggleMenu()">Photography</a>
+    <a href="about.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">About Me</a>
+    <a href="testimonials.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Testimonials</a>
+    <a href="contact.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Contact</a>
+</div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-32 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto w-full flex-grow">
+        
+        <!-- INTRO -->
+        <section class="text-center mb-20 fade-in">
+            <h1 class="text-4xl md:text-5xl font-light uppercase tracking-[0.25em] mb-4 font-heading">
+                Photography
+            </h1>
+            <p class="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-gray-500">
+                A collection of moments during my travels in New Zealand
+            </p>
+        </section>
+
+        <!-- GRILLE DESTRUCTURÉE (MASONRY) -->
+        <!-- L'ordre ici alterne Vertical / Horizontal pour maximiser l'harmonie visuelle dans les colonnes -->
+        <section class="masonry-grid fade-in" style="animation-delay: 0.2s;">
+
+            <!-- 1. PORTRAIT (Vertical) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo22.jpg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop'" alt="Portrait" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-500"></div>
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0">
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Rob Roy glacier</h3>
+                </div>
+            </div>
+
+            <!-- 2. PAYSAGE (Horizontal) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo1.jpg" alt="Nature" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Piha</h3>
+                </div>
+            </div>
+
+            <!-- 3. PORTRAIT (Vertical) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/drone1.jpg"" onerror="this.src='https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop'" alt="Fashion" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Karangahake</h3>
+                </div>
+            </div>
+
+            <!-- 4. PAYSAGE (Architecture) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo3.jpg" alt="Architecture" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Thames</h3>
+                </div>
+            </div>
+
+            <!-- 5. PORTRAIT (Vertical - Film) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo2.jpg" onerror="this.src='https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?q=80&w=800&auto=format&fit=crop'" alt="Film" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Whangamatā</h3>
+                </div>
+            </div>
+
+            <!-- 6. PAYSAGE (Wide Nature) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo18.jpg" alt="Nature" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Aoraki Mout Cook</h3>
+                </div>
+            </div>
+
+            <!-- 7. PORTRAIT (Studio) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/Drone2.jpg" onerror="this.src='https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800&auto=format&fit=crop'" alt="Studio" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Lake Ngaroto</h3>
+                </div>
+            </div>
+
+            <!-- 8. PAYSAGE (Urban Night) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/drone4.jpg" alt="Urban" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Lake Ngaroto</h3>
+                </div>
+            </div>
+
+            <!-- 9. PORTRAIT (BW High Contrast) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo6.jpg" alt="BW" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Rotorua</h3>
+                </div>
+            </div>
+
+            <!-- 10. PAYSAGE (Ocean) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/clo2.jpg" alt="Ocean" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Onemana</h3>
+                </div>
+            </div>
+
+            <!-- 11. PORTRAIT (Vogue Style) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo24.jpg" alt="Fashion" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Mount Aspiring National Park</h3>
+                </div>
+            </div>
+
+            <!-- 12. PAYSAGE (Yosemite) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo19.jpg" alt="Yosemite" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Mount Aspiring National Park</h3>
+                </div>
+            </div>
+
+            <!-- 13. PORTRAIT (Her) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo16.jpg" onerror="this.src='https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop'" alt="Portrait" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Aoraki Mout Cook</h3>
+                </div>
+            </div>
+
+            <!-- 14. PAYSAGE (Desert) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo5.jpg" alt="Desert" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Rotorua</h3>
+                </div>
+            </div>
+
+            <!-- 15. PORTRAIT (Artistic Reflection) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo21.jpg" alt="Art" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Aoraki Mout Cook</h3>
+                </div>
+            </div>
+
+            <!-- 16. PAYSAGE (Forest) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo4.jpg" alt="Forest" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Coromandel Forest Park</h3>
+                </div>
+            </div>
+
+            <!-- 17. PORTRAIT (Texture) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/clo1.jpg" alt="Texture" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Onemana</h3>
+                </div>
+            </div>
+
+            <!-- 18. PAYSAGE (Close Detail / Horizontal) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/drone3.jpg" onerror="this.src='https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=800&auto=format&fit=crop'" alt="Detail" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Copenhague</h3>
+                </div>
+            </div>
+
+            <!-- 19. PORTRAIT (Expressive) -->
+            <div class="masonry-item group relative overflow-hidden bg-gray-100 cursor-pointer">
+                <img src="Assets/photography/photo25.jpg" alt="Portrait" class="w-full h-auto object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-[800ms] ease-in-out">
+                <div class="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0 z-10">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-white drop-shadow-md"></p>
+                    <h3 class="text-sm font-heading uppercase tracking-widest text-white drop-shadow-md">Queen Charlotte Sound</h3>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center text-[9px] uppercase tracking-widest text-gray-400 border-t border-gray-100 mt-auto">
+        &copy; 2024 Louis Leroy. All rights reserved.
+    </footer>
+
+    <script>
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const l1 = document.getElementById('line1');
+    const l2 = document.getElementById('line2');
+    
+    // Ouvre ou ferme le menu
+    menu.classList.toggle('opacity-0');
+    menu.classList.toggle('pointer-events-none');
+    
+    // Animation du burger vers la croix (X)
+    l1.classList.toggle('rotate-45');
+    l1.classList.toggle('translate-y-[4px]'); 
+    l2.classList.toggle('-rotate-45');
+    l2.classList.toggle('-translate-y-[3px]');
+
+    // Bloque le défilement de la page quand le menu est ouvert
+    if (!menu.classList.contains('opacity-0')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+}
+</script>
+
+<div id="lightbox" class="fixed inset-0 bg-black/95 z-[200] hidden flex flex-col items-center justify-center cursor-zoom-out transition-opacity duration-300" onclick="closeLightbox()">
+    <button class="absolute top-10 right-10 text-white hover:rotate-90 transition-transform duration-300">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+    
+    <img id="lightbox-img" src="" alt="Agrandissement" class="max-w-[90%] max-h-[85vh] object-contain shadow-2xl scale-95 transition-transform duration-300">
+    
+    <p id="lightbox-caption" class="mt-6 text-white text-[10px] uppercase tracking-[0.4em] font-light"></p>
+</div>
+
+</body>
+</html>
