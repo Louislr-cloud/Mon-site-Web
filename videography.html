@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Leroy | Videography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- HEADER -->
+    <header class="fixed w-full z-50 bg-white border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
+    <div class="flex items-center space-x-5">
+        <img src="Assets/header_logo.png" alt="Logo" id="header-logo" class="h-10 md:h-12 w-auto object-contain transition-all">
+        <a href="index.html" class="font-medium tracking-[0.3em]">Louis Leroy</a>
+    </div>
+    <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="font-light hover:font-bold transition-all">Homepage</a>
+        <a href="videography.html" class="font-bold">Videography</a> <!-- GRAS ICI -->
+        <a href="photography.html" class="font-light hover:font-bold transition-all">Photography</a>
+        <a href="about.html" class="font-light hover:font-bold transition-all">About Me</a>
+        <a href="testimonials.html" class="font-light hover:font-bold transition-all">Testimonials</a>
+        <a href="contact.html" class="font-light hover:font-bold transition-all">Contact</a>
+    </div>
+    <div class="md:hidden cursor-pointer z-[110] space-y-1.5" onclick="toggleMenu()">
+    <div id="line1" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+    <div id="line2" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+</div>
+</nav>
+<div id="mobile-menu" class="fixed inset-0 bg-white z-[105] flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-500">
+    <a href="index.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Homepage</a>
+    <a href="videography.html" class="text-sm tracking-[0.4em] uppercase font-bold" onclick="toggleMenu()">Videography</a>
+    <a href="photography.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Photography</a>
+    <a href="about.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">About Me</a>
+    <a href="testimonials.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Testimonials</a>
+    <a href="contact.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Contact</a>
+</div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="pt-32 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto w-full">
+
+        <!-- INTRO -->
+        <section class="text-center mb-16 fade-in">
+            <h1 class="text-4xl md:text-5xl font-light uppercase tracking-[0.25em] mb-4 font-heading">
+                Videography
+            </h1>
+            <p class="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-gray-500">
+                Discover some of my recent projects
+            </p>
+        </section>
+
+        <!-- GRID 3 COLONNES x 4 LIGNES -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in" style="animation-delay: 0.2s;">
+
+<div id="video-container-1" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-1', 'hW-lz9BGl2o')">
+     
+    <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/catchafish.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Wānaka</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Catch a fish</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // Configuration Mode Cinématique :
+    // color=white : Remplace le rouge YT par une barre blanche minimaliste
+    // modestbranding=1 : Cache le logo YouTube dans la barre de contrôle
+    // rel=0 : Empêche les suggestions d'autres chaînes à la fin
+    // iv_load_policy=3 : Désactive les annotations/popups durant la vidéo
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&color=white&iv_load_policy=3&showinfo=0&autohide=1"
+            class="absolute inset-0 w-full h-full border-0 shadow-2xl"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+}
+</script>
+
+<div id="video-container-2" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-2', 'S0D9Ovd9Eik')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/boatwhanga.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Whangamatā</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">SurfSup Kayak & boat tours</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+</script>
+
+<div id="video-container-3" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-3', 'Sln3xrkLhWE')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/surfwhiritoa.jpg" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Whangamatā</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">SurfSup Kayak & boat tours</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+<div id="video-container-4" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-4', 'eghDaCVFzN8')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/crosshilldomes.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Hāwea</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Cross Hill Lodges & Domes</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+<div id="video-container-5" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-5', 'smPEPosCEz0')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/domehawea.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Hāwea</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Dome Hāwea</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+<div id="video-container-6" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-6', 'QGMgpiOtIkI')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/lakehaweastation.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Hāwea</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Lake Hāwea Station</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+<div id="video-container-7" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-7', 'yC-GGxgtcF8')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/tarrasvineyards.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Wine tasting and events</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Tarras Vineyards</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+           <div id="video-container-8" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-8', 'hrQlenc6z7Y')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/rippon.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Wānaka</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Rippon Vineyards</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+         <div id="video-container-9" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-9', 'EQmsPWSuDCo')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/croshillchef.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Hāwea</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Cross Hill Lodges Chef
+</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+         <div id="video-container-10" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-10', 'Z4DgD-UWbNQ')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/skatewhanga.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Whangamatā</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Skate Session
+</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+         <div id="video-container-11" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-11', '_JQZQuP_ga0')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/robroy.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Wānaka</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">Rob Roy Glacier
+</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+
+         <div id="video-container-12" 
+     class="group relative w-full aspect-video bg-gray-100 cursor-pointer overflow-hidden"
+     onclick="loadVideo('video-container-12', 'TpnqSX3a030')"> <div class="absolute inset-0 w-full h-full">
+        <img src="Assets/miniatures_video/opoutere.png" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-[700ms] ease-in-out">
+        
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 delay-75">
+            <div class="w-16 h-16 border border-white rounded-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <svg class="w-5 h-5 text-white fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-black/90 to-transparent translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+            <p class="text-[9px] uppercase tracking-[0.2em] mb-1 opacity-80">Whangamatā</p>
+            <h3 class="text-lg font-light uppercase tracking-widest font-heading">opoutere
+</h3>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    
+    // On utilise l'argument videoId pour construire l'URL
+    // J'ai ajouté autoplay=1 pour que ça se lance vraiment au clic
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    
+    container.classList.remove('cursor-pointer', 'group');
+} // <-- La fermeture manquante était ici
+</script>
+
+
+        </section>
+
+        <!-- LOAD MORE -->
+        <div class="text-center mt-20">
+            <a href="#" class="inline-block text-[10px] uppercase tracking-[0.3em] font-medium text-gray-900 border-b border-gray-900 pb-2 hover:text-gray-500 hover:border-gray-500 transition-colors">
+                Load More
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center text-[9px] uppercase tracking-widest text-gray-400 border-t border-gray-100">
+        &copy; 2024 Louis Leroy. All rights reserved.
+    </footer>
+
+    <script>
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const l1 = document.getElementById('line1');
+    const l2 = document.getElementById('line2');
+    
+    // Ouvre ou ferme le menu
+    menu.classList.toggle('opacity-0');
+    menu.classList.toggle('pointer-events-none');
+    
+    // Animation du burger vers la croix (X)
+    l1.classList.toggle('rotate-45');
+    l1.classList.toggle('translate-y-[4px]'); 
+    l2.classList.toggle('-rotate-45');
+    l2.classList.toggle('-translate-y-[3px]');
+
+    // Bloque le défilement de la page quand le menu est ouvert
+    if (!menu.classList.contains('opacity-0')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Leroy | Testimonials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ===== TESTIMONIAL HOVER EFFECT ===== */
+        .testimonial-card {
+            transition: all 0.4s ease;
+            padding: 2.5rem 1.5rem;
+            border-radius: 6px;
+        }
+
+        /* Quand on survole la zone des témoignages → tout devient plus fade */
+        .testimonials-wrapper:hover .testimonial-card {
+            opacity: 0.35;
+        }
+
+        /* Carte active */
+        .testimonial-card:hover {
+            opacity: 1 !important;
+            background: white;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+            transform: translateY(-6px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="fixed w-full z-50 bg-white border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
+            <div class="flex items-center space-x-5">
+                <img src="Assets/header_logo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
+                <a href="index.html" class="font-medium tracking-[0.3em]">Louis Leroy</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-light hover:font-bold transition-all">Homepage</a>
+                <a href="videography.html" class="font-light hover:font-bold transition-all">Videography</a>
+                <a href="photography.html" class="font-light hover:font-bold transition-all">Photography</a>
+                <a href="about.html" class="font-light hover:font-bold transition-all">About Me</a>
+                <a href="testimonials.html" class="font-bold">Testimonials</a>
+                <a href="contact.html" class="font-light hover:font-bold transition-all">Contact</a>
+            </div>
+
+            <div class="md:hidden cursor-pointer z-[110] space-y-1.5" onclick="toggleMenu()">
+    <div id="line1" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+    <div id="line2" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+</div>
+
+        </nav>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[105] flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-500">
+    <a href="index.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Homepage</a>
+    <a href="videography.html" class="text-sm tracking-[0.4em] uppercase font-bold" onclick="toggleMenu()">Videography</a>
+    <a href="photography.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Photography</a>
+    <a href="about.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">About Me</a>
+    <a href="testimonials.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Testimonials</a>
+    <a href="contact.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Contact</a>
+</div>
+    </header>
+
+    <!-- SECTION TESTIMONIALS -->
+    <section class="min-h-screen flex flex-col justify-center py-24 px-6 md:px-12 bg-[#fcfcfc]">
+
+        
+        <!-- TITRE -->
+        <div class="text-center mb-20 md:mb-24 mt-10">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-light uppercase tracking-[0.25em] text-gray-900 mb-5 font-heading">
+                Testimonials
+            </h1>
+            <p class="text-[10px] md:text-[11px] uppercase tracking-[0.35em] text-gray-500 font-medium">
+                Words from clients
+            </p>
+        </div>
+
+        <!-- GRILLE -->
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 items-start">
+
+
+    <!-- CARD -->
+    <div class="testimonial-card group text-center px-8 py-12 bg-white rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-sm">
+
+
+    <!-- Guillemets -->
+    <div class="mb-6 flex justify-center">
+        <svg class="w-5 h-5 text-gray-300 group-hover:text-gray-400 transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21L14.017 18C14.017 16.0547 15.3857 14.6885 16.7586 13.9922C16.0371 13.9219 15.6357 13.4395 15.6357 12.5625C15.6357 11.2363 16.7114 10.291 17.9943 10.291C19.3457 10.291 20.3529 11.2676 20.3529 12.6504C20.3529 16.2793 17.64 20.375 14.017 21ZM5 21L5 18C5 16.0547 6.36857 14.6885 7.74143 13.9922C7.02 13.9219 6.61857 13.4395 6.61857 12.5625C6.61857 11.2363 7.69429 10.291 8.97714 10.291C10.3286 10.291 11.3357 11.2676 11.3357 12.6504C11.3357 16.2793 8.62286 20.375 5 21Z"/>
+        </svg>
+    </div>
+
+    <!-- Texte -->
+    <p class="text-sm md:text-[15px] font-light leading-7 text-gray-600 mb-6">
+        We had the pleasure of hosting incredibly talented Louis on board, and he's turned the magic of a Catch a Fish adventure into this stunning short film.
+    </br>From the thrill of the catch to the serenity of our alpine lakes, Louis captured it all. The laughter, the scenery, the fresh air, and the pure joy of being out here.
+     His creative eye brings the experience to life in a way words never could. Louis, thank you for sharing your gift and giving everyone a glimpse of what makes our trips so special.
+    </p>
+
+    <!-- Auteur -->
+    <div>
+        <h4 class="text-[11px] uppercase font-bold tracking-[0.15em] text-gray-900 mb-1 font-heading">
+            Sanne & Olie
+        </h4>
+        <span class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium">
+            Catch a Fish
+        </span>
+    </div>
+
+</div>
+
+
+
+    <!-- CARD -->
+    <div class="testimonial-card group text-center px-8 py-12 bg-white rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-sm">
+
+
+    <!-- Guillemets -->
+    <div class="mb-6 flex justify-center">
+        <svg class="w-5 h-5 text-gray-300 group-hover:text-gray-400 transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21L14.017 18C14.017 16.0547 15.3857 14.6885 16.7586 13.9922C16.0371 13.9219 15.6357 13.4395 15.6357 12.5625C15.6357 11.2363 16.7114 10.291 17.9943 10.291C19.3457 10.291 20.3529 11.2676 20.3529 12.6504C20.3529 16.2793 17.64 20.375 14.017 21ZM5 21L5 18C5 16.0547 6.36857 14.6885 7.74143 13.9922C7.02 13.9219 6.61857 13.4395 6.61857 12.5625C6.61857 11.2363 7.69429 10.291 8.97714 10.291C10.3286 10.291 11.3357 11.2676 11.3357 12.6504C11.3357 16.2793 8.62286 20.375 5 21Z"/>
+        </svg>
+    </div>
+
+    <!-- Texte -->
+    <p class="text-sm md:text-[15px] font-light leading-7 text-gray-600 mb-6">
+        Louis was great to work with, and his videography really captured the atmosphere we were after. He brought a calm, professional energy to the shoot and delivered beautiful, authentic footage that told our story perfectly.
+
+    </p>
+
+    <!-- Auteur -->
+    <div>
+        <h4 class="text-[11px] uppercase font-bold tracking-[0.15em] text-gray-900 mb-1 font-heading">
+            Siobhan
+        </h4>
+        <span class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium">
+            Corss Hill Lodge & Domes
+        </span>
+    </div>
+
+</div>
+
+
+
+    <!-- CARD -->
+    <div class="testimonial-card group text-center px-8 py-12 bg-white rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-sm">
+
+
+    <!-- Guillemets -->
+    <div class="mb-6 flex justify-center">
+        <svg class="w-5 h-5 text-gray-300 group-hover:text-gray-400 transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21L14.017 18C14.017 16.0547 15.3857 14.6885 16.7586 13.9922C16.0371 13.9219 15.6357 13.4395 15.6357 12.5625C15.6357 11.2363 16.7114 10.291 17.9943 10.291C19.3457 10.291 20.3529 11.2676 20.3529 12.6504C20.3529 16.2793 17.64 20.375 14.017 21ZM5 21L5 18C5 16.0547 6.36857 14.6885 7.74143 13.9922C7.02 13.9219 6.61857 13.4395 6.61857 12.5625C6.61857 11.2363 7.69429 10.291 8.97714 10.291C10.3286 10.291 11.3357 11.2676 11.3357 12.6504C11.3357 16.2793 8.62286 20.375 5 21Z"/>
+        </svg>
+    </div>
+
+    <!-- Texte -->
+    <p class="text-sm md:text-[15px] font-light leading-7 text-gray-600 mb-6">
+        Louis was excellent to work with, from our initial meeting he was professional, interested in the deep purpose of the property and interacted with all staff in an impeccable way. 
+        
+    </br>He used his excellent videography skills to capture our accomodation in a beautiful way with intention and produced a great amount of content.
+
+
+    <!-- Auteur -->
+    <div>
+        <h4 class="text-[11px] uppercase font-bold tracking-[0.15em] text-gray-900 mb-1 font-heading">
+            Annie
+        </h4>
+        <span class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium">
+            Lake Hāwea Station
+        </span>
+    </div>
+
+</div>
+
+
+
+    <!-- CARD -->
+    <div class="testimonial-card group text-center px-8 py-12 bg-white rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-sm">
+
+
+    <!-- Guillemets -->
+    <div class="mb-6 flex justify-center">
+        <svg class="w-5 h-5 text-gray-300 group-hover:text-gray-400 transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21L14.017 18C14.017 16.0547 15.3857 14.6885 16.7586 13.9922C16.0371 13.9219 15.6357 13.4395 15.6357 12.5625C15.6357 11.2363 16.7114 10.291 17.9943 10.291C19.3457 10.291 20.3529 11.2676 20.3529 12.6504C20.3529 16.2793 17.64 20.375 14.017 21ZM5 21L5 18C5 16.0547 6.36857 14.6885 7.74143 13.9922C7.02 13.9219 6.61857 13.4395 6.61857 12.5625C6.61857 11.2363 7.69429 10.291 8.97714 10.291C10.3286 10.291 11.3357 11.2676 11.3357 12.6504C11.3357 16.2793 8.62286 20.375 5 21Z"/>
+        </svg>
+    </div>
+
+    <!-- Texte -->
+    <p class="text-sm md:text-[15px] font-light leading-7 text-gray-600 mb-6">
+        Louis was absolutely amazing to work with. He’s so calm, kind, and a great listener. He really took the time to understand what I wanted and was very considerate of my students and my space while filming. I love the final video, it captures the essence of my business beautifully. Louis is incredibly talented and I’d highly recommend him to anyone looking for authentic, high-quality video work.
+
+    </p>
+
+    <!-- Auteur -->
+    <div>
+        <h4 class="text-[11px] uppercase font-bold tracking-[0.15em] text-gray-900 mb-1 font-heading">
+            Kate
+        </h4>
+        <span class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium">
+            Dome Hāwea
+        </span>
+    </div>
+
+</div>
+
+
+
+    <!-- CARD -->
+    <div class="testimonial-card group text-center px-8 py-12 bg-white rounded-2xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-sm">
+
+
+    <!-- Guillemets -->
+    <div class="mb-6 flex justify-center">
+        <svg class="w-5 h-5 text-gray-300 group-hover:text-gray-400 transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21L14.017 18C14.017 16.0547 15.3857 14.6885 16.7586 13.9922C16.0371 13.9219 15.6357 13.4395 15.6357 12.5625C15.6357 11.2363 16.7114 10.291 17.9943 10.291C19.3457 10.291 20.3529 11.2676 20.3529 12.6504C20.3529 16.2793 17.64 20.375 14.017 21ZM5 21L5 18C5 16.0547 6.36857 14.6885 7.74143 13.9922C7.02 13.9219 6.61857 13.4395 6.61857 12.5625C6.61857 11.2363 7.69429 10.291 8.97714 10.291C10.3286 10.291 11.3357 11.2676 11.3357 12.6504C11.3357 16.2793 8.62286 20.375 5 21Z"/>
+        </svg>
+    </div>
+
+    <!-- Texte -->
+    <p class="text-sm md:text-[15px] font-light leading-7 text-gray-600 mb-6">
+        We are thrilled with the work you have done and the footage that has been captured. We appreciate you tailoring the video to our needs. More importantly, what we found most professional was your attempt at the scope of work and list of shooting items, something we find not a lot of photographers/videographers will not do. Per the initial scope of work, we feel the video successfully captures the required objectives. 
+
+    </p>
+
+    <!-- Auteur -->
+    <div>
+        <h4 class="text-[11px] uppercase font-bold tracking-[0.15em] text-gray-900 mb-1 font-heading">
+            Haddon & Team
+        </h4>
+        <span class="text-[10px] text-gray-400 uppercase tracking-[0.15em] font-medium">
+            Rippon Vineyards
+        </span>
+    </div>
+
+</div>
+
+
+
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-24">
+            <a href="#" class="inline-block text-[10px] uppercase tracking-[0.3em] text-gray-800 border-b border-gray-300 pb-2 hover:border-gray-800 transition-all font-medium">
+                View all testimonials
+            </a>
+        </div>
+
+    </section>
+
+    <script>
+// 1. Logique du Menu Mobile
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const l1 = document.getElementById('line1');
+    const l2 = document.getElementById('line2');
+    
+    menu.classList.toggle('opacity-0');
+    menu.classList.toggle('pointer-events-none');
+    
+    l1.classList.toggle('rotate-45');
+    l1.classList.toggle('translate-y-[4px]'); 
+    l2.classList.toggle('-rotate-45');
+    l2.classList.toggle('-translate-y-[3px]');
+
+    document.body.style.overflow = (!menu.classList.contains('opacity-0')) ? 'hidden' : 'auto';
+}
+
+// 2. Logique de chargement des vidéos (Unique pour toute la page)
+function loadVideo(containerId, videoId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = `
+        <iframe 
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&color=white"
+            class="absolute inset-0 w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>`;
+    container.classList.remove('cursor-pointer', 'group');
+}
+</script>
+
+</body>
+</html>
