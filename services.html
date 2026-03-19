@@ -45,21 +45,24 @@ opacity:0.2;
 /* service cards */
 
 .service-card{
-transition:all .45s cubic-bezier(.16,1,.3,1);
+transition:all .35s ease;
 border-radius:14px;
 padding:3rem 2rem;
 background:white;
 position:relative;
 }
 
+/* effet global beaucoup plus léger */
+@media (hover:hover){
 .services-wrapper:hover .service-card{
-opacity:.35;
+opacity:.75;
 }
 
 .service-card:hover{
-opacity:1!important;
-transform:translateY(-10px);
-box-shadow:0 30px 60px rgba(0,0,0,0.08);
+opacity:1;
+transform:translateY(-4px);
+box-shadow:0 20px 40px rgba(0,0,0,0.06);
+}
 }
 
 /* popular pack */
@@ -106,33 +109,11 @@ color:white;
 
 .timeline-line{
 position:absolute;
-top:6px;
+top:14px;
 left:0;
 width:100%;
 height:1px;
-background:#d1d5db;
-}
-
-.timeline-line:before,
-.timeline-line:after{
-content:"";
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-width:4px;
-height:4px;
-border-radius:50%;
-background:#9ca3af;
-box-shadow:8px 0 #9ca3af,16px 0 #9ca3af;
-}
-
-.timeline-line:before{
-left:-24px;
-}
-
-.timeline-line:after{
-right:-24px;
-box-shadow:-8px 0 #9ca3af,-16px 0 #9ca3af;
+background:linear-gradient(to right, transparent, #d1d5db, transparent);
 }
 
 .timeline-step{
@@ -140,10 +121,33 @@ transition:.3s;
 }
 
 .timeline-step:hover{
-transform:translateY(-3px);
+transform:translateY(-5px);
 }
 
+.timeline-ring {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #111;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  position: relative;
+}
+.timeline-ring:after {
+  content:"";
+  position:absolute;
+  top:-4px;
+  left:-4px;
+  width:24px;
+  height:24px;
+  border:2px solid #d1d5db;
+  border-radius:50%;
+}
+
+
+
 </style>
+
 
 </head>
 
@@ -191,7 +195,7 @@ Services & Pricing
 </h1>
 
 <p class="text-[11px] uppercase tracking-[0.35em] text-gray-500">
-Video packages for brands and outdoor businesses
+Helping tourism and outdoor brands showcase their story and attract more customers.
 </p>
 
 <div class="section-divider"></div>
@@ -213,20 +217,36 @@ Social Media Video
 </h3>
 
 <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400 mb-8">
-250 AUD
-</p>
+From 250 AUD
 
-<p class="text-[15px] font-light leading-7 text-gray-600">
+<ul class="text-[15px] font-light leading-7 text-gray-600 space-y-3 text-left inline-block">
+<li class="flex items-start gap-3">
+<span class="text-black text-sm mt-[2px]">✓</span>
+<span>(+/-) 2h shooting</span>
+</li>
 
-1–2h shooting<br>
-• 1 cinematic video (20–40s)<br>
-• vertical format for Reels<br>
-• color grading + music<br>
-• delivery in 4–5 days
+<li class="flex items-start gap-3">
+<span class="text-black text-sm mt-[2px]">✓</span>
+<span>Drone footage</span>
+</li>
 
-</p>
+<li class="flex items-start gap-3">
+<span class="text-black text-sm mt-[2px]">✓</span>
+<span>1 cinematic video (20–50s)</span>
+</li>
 
-<a href="contact.html" class="cta">Start a project</a>
+<li class="flex items-start gap-3">
+<span class="text-black text-sm mt-[2px]">✓</span>
+<span>Vertical format for Reels</span>
+</li>
+
+<li class="flex items-start gap-3">
+<span class="text-black text-sm mt-[2px]">✓</span>
+<span>Color grading + music</span>
+</li>
+</ul>
+
+<a href="contact.html" class="cta">Get a quote</a>
 
 </div>
 
@@ -244,12 +264,12 @@ Business Promo
 </h3>
 
 <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400 mb-8">
-500 AUD
+From 500 AUD
 </p>
 
 <p class="text-[15px] font-light leading-7 text-gray-600">
 
-3–4h shooting<br>
+(+/-) 4h shooting<br>
 • 1 promotional video (60–90s)<br>
 • 1 vertical edit for Instagram<br>
 • color grading + sound design<br>
@@ -271,7 +291,7 @@ Brand Story
 </h3>
 
 <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400 mb-8">
-1000 AUD
+from 1000 AUD
 </p>
 
 <p class="text-[15px] font-light leading-7 text-gray-600">
@@ -295,8 +315,11 @@ Full day shooting<br>
 
 <div class="text-center mt-24">
 
-<p class="text-[11px] uppercase tracking-[0.35em] text-gray-400">
-Custom projects available — let's discuss your vision
+<p class="text-[11px] uppercase tracking-[0.35em] text-gray-700">
+These packages are here to give you an idea but every project is unique. Custom projects are available. 
+<br>
+<br>
+Let's discuss your vision
 </p>
 
 </div>
@@ -304,66 +327,80 @@ Custom projects available — let's discuss your vision
 
 
 <!-- TIMELINE -->
-
 <div class="max-w-6xl mx-auto mt-32">
 
-<div class="text-center mb-16">
+  <!-- TITLE -->
+  <div class="text-center mb-16">
+    <h2 class="text-2xl uppercase tracking-[0.25em] font-heading mb-4">
+      The Process
+    </h2>
+    <p class="text-[11px] uppercase tracking-[0.35em] text-gray-400">
+      How a project comes to life
+    </p>
+    <div class="section-divider"></div>
+  </div>
 
-<h2 class="text-2xl uppercase tracking-[0.25em] font-heading mb-4">
-The Process
-</h2>
+  <!-- TIMELINE LINE -->
+  <div class="relative">
+    <div class="timeline-line hidden md:block z-0"></div>
 
-<p class="text-[11px] uppercase tracking-[0.35em] text-gray-400">
-How a project comes to life
-</p>
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-12 text-center relative z-10">
 
-<div class="section-divider"></div>
+      <!-- Meeting -->
+      <div class="timeline-step">
+        <svg class="mx-auto mb-4 w-8 h-8 text-gray-900 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 8h10M7 12h6m-6 4h4M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8 9 3.582 9 8z"/>
+        </svg>
+        <h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Meeting</h3>
+        <p class="text-sm text-gray-500">Discuss vision and goals</p>
+      </div>
+
+      <!-- Planning -->
+      <div class="timeline-step">
+        <svg class="mx-auto mb-4 w-8 h-8 text-gray-900 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M8 7V3h8v4M3 11h18M5 15h14M5 19h14"/>
+        </svg>
+        <h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Planning</h3>
+        <p class="text-sm text-gray-500">Shot list and creative direction</p>
+      </div>
+
+      <!-- Shooting -->
+      <div class="timeline-step">
+        <svg class="mx-auto mb-4 w-8 h-8 text-gray-900 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 7h16v12H4V7zM16 3h2v4h-2V3zM6 3h2v4H6V3z"/>
+        </svg>
+        <h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Shooting</h3>
+        <p class="text-sm text-gray-500">Capturing cinematic footage</p>
+      </div>
+
+      <!-- Editing -->
+      <div class="timeline-step">
+        <svg class="mx-auto mb-4 w-8 h-8 text-gray-900 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M11 5l7 7-9 9-7-7 9-9zM16 4l4 4"/>
+        </svg>
+        <h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Editing</h3>
+        <p class="text-sm text-gray-500">Color grading and sound</p>
+      </div>
+
+      <!-- Delivery -->
+      <div class="timeline-step">
+        <svg class="mx-auto mb-4 w-8 h-8 text-gray-900 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 13l4 4L19 7"/>
+        </svg>
+        <h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Delivery</h3>
+        <p class="text-sm text-gray-500">Final video and revisions</p>
+      </div>
+
+    </div>
+  </div>
 
 </div>
 
-
-<div class="relative">
-
-<div class="timeline-line hidden md:block"></div>
-
-
-<div class="grid grid-cols-1 md:grid-cols-5 gap-12 text-center">
-
-<div class="timeline-step">
-<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
-<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Meeting</h3>
-<p class="text-sm text-gray-500">Discuss vision and goals</p>
-</div>
-
-<div class="timeline-step">
-<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
-<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Planning</h3>
-<p class="text-sm text-gray-500">Shot list and creative direction</p>
-</div>
-
-<div class="timeline-step">
-<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
-<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Shooting</h3>
-<p class="text-sm text-gray-500">Capturing cinematic footage</p>
-</div>
-
-<div class="timeline-step">
-<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
-<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Editing</h3>
-<p class="text-sm text-gray-500">Color grading and sound</p>
-</div>
-
-<div class="timeline-step">
-<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
-<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Delivery</h3>
-<p class="text-sm text-gray-500">Final video and revisions</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 </section>
 
