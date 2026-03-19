@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louis Leroy | Videography</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
@@ -27,34 +27,39 @@
 <body class="text-gray-900">
 
     <!-- HEADER -->
-    <header class="fixed w-full z-50 bg-white border-b border-gray-100">
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
-    <div class="flex items-center space-x-5">
-        <img src="Assets/header_logo.png" alt="Logo" id="header-logo" class="h-10 md:h-12 w-auto object-contain transition-all">
-        <a href="index.html" class="font-medium tracking-[0.3em]">Louis Leroy</a>
-    </div>
-    <div class="hidden md:flex space-x-8">
-        <a href="index.html" class="font-light hover:font-bold transition-all">Homepage</a>
-        <a href="videography.html" class="font-bold">Videography</a> <!-- GRAS ICI -->
-        <a href="photography.html" class="font-light hover:font-bold transition-all">Photography</a>
-        <a href="about.html" class="font-light hover:font-bold transition-all">About Me</a>
-        <a href="testimonials.html" class="font-light hover:font-bold transition-all">Testimonials</a>
-        <a href="contact.html" class="font-light hover:font-bold transition-all">Contact</a>
-    </div>
-    <div class="md:hidden cursor-pointer z-[110] space-y-1.5" onclick="toggleMenu()">
-    <div id="line1" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
-    <div id="line2" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+  <header class="fixed w-full z-50 bg-white border-b border-gray-100">
+<nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
+<div class="flex items-center space-x-5">
+<img src="Assets/header_logo.png" alt="Logo" id="header-logo" class="h-10 md:h-12 w-auto object-contain transition-all">
+<a href="index.html" class="font-medium tracking-[0.3em]">Louis Leroy</a>
+</div>
+
+<div class="hidden md:flex space-x-8">
+<a href="index.html" class="font-light hover:font-bold transition-all duration-200">Homepage</a>
+<a href="videography.html" class="font-bold hover:font-bold transition-all duration-200">Videography</a>
+<a href="photography.html" class="font-light">Photography</a>
+<a href="about.html" class="font-light hover:font-bold transition-all duration-200">About Me</a>
+<a href="testimonials.html" class="font-light hover:font-bold transition-all duration-200">Testimonials</a>
+<a href="services.html" class="font-light hover:font-bold transition-all">Services</a>
+<a href="contact.html" class="font-light hover:font-bold transition-all duration-200">Contact</a>
+</div>
+
+<div class="md:hidden cursor-pointer z-[110] space-y-1.5" onclick="toggleMenu()">
+<div id="line1" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
+<div id="line2" class="w-5 h-[1px] bg-gray-900 transition-all duration-300"></div>
 </div>
 </nav>
+
 <div id="mobile-menu" class="fixed inset-0 bg-white z-[105] flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-500">
-    <a href="index.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Homepage</a>
-    <a href="videography.html" class="text-sm tracking-[0.4em] uppercase font-bold" onclick="toggleMenu()">Videography</a>
-    <a href="photography.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Photography</a>
-    <a href="about.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">About Me</a>
-    <a href="testimonials.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Testimonials</a>
-    <a href="contact.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Contact</a>
+<a href="index.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Homepage</a>
+<a href="videography.html" class="text-sm tracking-[0.4em] uppercase font-bold" onclick="toggleMenu()">Videography</a>
+<a href="photography.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Photography</a>
+<a href="about.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">About Me</a>
+<a href="testimonials.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Testimonials</a>
+<a href="services.html" class="text-sm tracking-[0.4em] uppercase" onclick="toggleMenu()">Services</a>
+<a href="contact.html" class="text-sm tracking-[0.4em] uppercase font-light" onclick="toggleMenu()">Contact</a>
 </div>
-    </header>
+</header>
 
     <!-- MAIN CONTENT -->
     <main class="pt-32 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto w-full">

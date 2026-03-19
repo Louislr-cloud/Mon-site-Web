@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Louis Leroy | Services & Pricing</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Inter',sans-serif;
+background:#fafafa;
+}
+
+h1,h2,h3,.font-heading{
+font-family:'Montserrat',sans-serif;
+}
+
+/* subtle background texture */
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+background-image:radial-gradient(circle at 1px 1px,rgba(0,0,0,0.03) 1px,transparent 0);
+background-size:28px 28px;
+pointer-events:none;
+}
+
+/* section divider */
+
+.section-divider{
+width:60px;
+height:2px;
+background:#111;
+margin:20px auto 0;
+opacity:0.2;
+}
+
+/* service cards */
+
+.service-card{
+transition:all .45s cubic-bezier(.16,1,.3,1);
+border-radius:14px;
+padding:3rem 2rem;
+background:white;
+position:relative;
+}
+
+.services-wrapper:hover .service-card{
+opacity:.35;
+}
+
+.service-card:hover{
+opacity:1!important;
+transform:translateY(-10px);
+box-shadow:0 30px 60px rgba(0,0,0,0.08);
+}
+
+/* popular pack */
+
+.popular{
+border:1px solid rgba(0,0,0,.15);
+box-shadow:0 40px 80px rgba(0,0,0,0.08);
+transform:scale(1.05);
+}
+
+.popular-badge{
+position:absolute;
+top:-14px;
+left:50%;
+transform:translateX(-50%);
+font-size:10px;
+letter-spacing:.25em;
+text-transform:uppercase;
+background:#111;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+}
+
+/* button */
+
+.cta{
+display:inline-block;
+margin-top:28px;
+font-size:11px;
+letter-spacing:.25em;
+text-transform:uppercase;
+padding:12px 24px;
+border:1px solid #111;
+transition:.35s;
+}
+
+.cta:hover{
+background:#111;
+color:white;
+}
+
+/* timeline */
+
+.timeline-line{
+position:absolute;
+top:6px;
+left:0;
+width:100%;
+height:1px;
+background:#d1d5db;
+}
+
+.timeline-line:before,
+.timeline-line:after{
+content:"";
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+width:4px;
+height:4px;
+border-radius:50%;
+background:#9ca3af;
+box-shadow:8px 0 #9ca3af,16px 0 #9ca3af;
+}
+
+.timeline-line:before{
+left:-24px;
+}
+
+.timeline-line:after{
+right:-24px;
+box-shadow:-8px 0 #9ca3af,-16px 0 #9ca3af;
+}
+
+.timeline-step{
+transition:.3s;
+}
+
+.timeline-step:hover{
+transform:translateY(-3px);
+}
+
+</style>
+
+</head>
+
+<body class="text-gray-800">
+
+
+<!-- HEADER -->
+
+<header class="fixed w-full z-50 bg-white border-b border-gray-100">
+
+<nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
+
+<div class="flex items-center space-x-5">
+<img src="Assets/header_logo.png" class="h-10 md:h-12">
+<a href="index.html" class="tracking-[0.3em] font-medium">Louis Leroy</a>
+</div>
+
+<div class="hidden md:flex space-x-8">
+
+<a href="index.html" class="hover:font-semibold">Homepage</a>
+<a href="videography.html">Videography</a>
+<a href="photography.html">Photography</a>
+<a href="about.html">About Me</a>
+<a href="testimonials.html">Testimonials</a>
+<a href="services.html" class="font-bold">Services</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- SERVICES -->
+
+<section class="min-h-screen flex flex-col justify-center py-32 px-6 md:px-12">
+
+<!-- TITLE -->
+
+<div class="text-center mb-24">
+
+<h1 class="text-4xl md:text-5xl font-light uppercase tracking-[0.25em] mb-6">
+Services & Pricing
+</h1>
+
+<p class="text-[11px] uppercase tracking-[0.35em] text-gray-500">
+Video packages for brands and outdoor businesses
+</p>
+
+<div class="section-divider"></div>
+
+</div>
+
+
+<!-- PACKS -->
+
+<div class="services-wrapper max-w-[1300px] mx-auto grid md:grid-cols-3 gap-10">
+
+
+<!-- PACK -->
+
+<div class="service-card text-center">
+
+<h3 class="text-lg uppercase tracking-[0.2em] mb-2 font-heading">
+Social Media Video
+</h3>
+
+<p class="text-[11px] tracking-[0.3em] uppercase text-gray-400 mb-8">
+250 AUD
+</p>
+
+<p class="text-[15px] font-light leading-7 text-gray-600">
+
+1–2h shooting<br>
+• 1 cinematic video (20–40s)<br>
+• vertical format for Reels<br>
+• color grading + music<br>
+• delivery in 4–5 days
+
+</p>
+
+<a href="contact.html" class="cta">Start a project</a>
+
+</div>
+
+
+<!-- POPULAR -->
+
+<div class="service-card popular text-center">
+
+<div class="popular-badge">
+Most Popular
+</div>
+
+<h3 class="text-lg uppercase tracking-[0.2em] mb-2 font-heading">
+Business Promo
+</h3>
+
+<p class="text-[11px] tracking-[0.3em] uppercase text-gray-400 mb-8">
+500 AUD
+</p>
+
+<p class="text-[15px] font-light leading-7 text-gray-600">
+
+3–4h shooting<br>
+• 1 promotional video (60–90s)<br>
+• 1 vertical edit for Instagram<br>
+• color grading + sound design<br>
+• music licensing
+
+</p>
+
+<a href="contact.html" class="cta">Start a project</a>
+
+</div>
+
+
+<!-- PACK -->
+
+<div class="service-card text-center">
+
+<h3 class="text-lg uppercase tracking-[0.2em] mb-2 font-heading">
+Brand Story
+</h3>
+
+<p class="text-[11px] tracking-[0.3em] uppercase text-gray-400 mb-8">
+1000 AUD
+</p>
+
+<p class="text-[15px] font-light leading-7 text-gray-600">
+
+Full day shooting<br>
+• 1 cinematic brand film (2–3 min)<br>
+• 2 vertical social videos<br>
+• advanced color grading<br>
+• full sound design
+
+</p>
+
+<a href="contact.html" class="cta">Start a project</a>
+
+</div>
+
+</div>
+
+
+<!-- reassurance -->
+
+<div class="text-center mt-24">
+
+<p class="text-[11px] uppercase tracking-[0.35em] text-gray-400">
+Custom projects available — let's discuss your vision
+</p>
+
+</div>
+
+
+
+<!-- TIMELINE -->
+
+<div class="max-w-6xl mx-auto mt-32">
+
+<div class="text-center mb-16">
+
+<h2 class="text-2xl uppercase tracking-[0.25em] font-heading mb-4">
+The Process
+</h2>
+
+<p class="text-[11px] uppercase tracking-[0.35em] text-gray-400">
+How a project comes to life
+</p>
+
+<div class="section-divider"></div>
+
+</div>
+
+
+<div class="relative">
+
+<div class="timeline-line hidden md:block"></div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-5 gap-12 text-center">
+
+<div class="timeline-step">
+<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
+<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Meeting</h3>
+<p class="text-sm text-gray-500">Discuss vision and goals</p>
+</div>
+
+<div class="timeline-step">
+<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
+<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Planning</h3>
+<p class="text-sm text-gray-500">Shot list and creative direction</p>
+</div>
+
+<div class="timeline-step">
+<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
+<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Shooting</h3>
+<p class="text-sm text-gray-500">Capturing cinematic footage</p>
+</div>
+
+<div class="timeline-step">
+<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
+<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Editing</h3>
+<p class="text-sm text-gray-500">Color grading and sound</p>
+</div>
+
+<div class="timeline-step">
+<div class="w-3 h-3 bg-gray-900 rounded-full mx-auto mb-6"></div>
+<h3 class="text-[11px] uppercase tracking-[0.25em] font-semibold mb-2">Delivery</h3>
+<p class="text-sm text-gray-500">Final video and revisions</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
