@@ -43,6 +43,29 @@
             display: block;
         }
     </style>
+
+    <script>
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const l1 = document.getElementById('line1');
+    const l2 = document.getElementById('line2');
+    
+    menu.classList.toggle('opacity-0');
+    menu.classList.toggle('pointer-events-none');
+    
+    l1.classList.toggle('rotate-45');
+    l1.classList.toggle('translate-y-[4px]');
+    l2.classList.toggle('-rotate-45');
+    l2.classList.toggle('-translate-y-[3px]');
+
+    if (!menu.classList.contains('opacity-0')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+}
+</script>
+
 </head>
 
 <body class="text-gray-900 flex flex-col min-h-screen">
