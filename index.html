@@ -140,29 +140,69 @@
         <!-- SUITE DU CONTENU (Accessible au scroll) -->
         
         <!-- ABOUT ME -->
-        <section id="about" class="pt-12 md:pt-24 pb-16 md:pb-24 max-w-7xl mx-auto w-full">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div class="hidden md:block relative md:h-[500px] w-full bg-gray-100 overflow-hidden">
-            <img src="Assets/images/about-me.jpg" alt="Louis Leroy" class="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition duration-700">
-        </div>
-        <div class="flex flex-col justify-center items-center md:items-start space-y-6 text-center md:text-left">
-            <h2 class="text-3xl md:text-4xl font-light uppercase tracking-[0.2em] font-heading">About Me</h2>
-            <div class="w-12 h-[1px] bg-gray-900 mx-auto md:mx-0"></div>
-            <p class="text-sm md:text-base font-light leading-relaxed text-gray-600 text-center md:text-left">
-                What I like most about videography is meeting and collaborating with passionate people. I enjoy creating authentic and visually engaging content, telling stories that highlight people, places, and experiences...
-                <br>
-            </p>
+        <section id="about" class="pt-20 md:pt-32 pb-20 md:pb-32 max-w-7xl mx-auto w-full px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        
+        <div class="flex flex-col space-y-8">
+            <div class="space-y-4">
+                <h2 class="text-3xl md:text-5xl font-light uppercase tracking-[0.2em] font-heading text-gray-900">About Me</h2>
+                <div class="w-16 h-[1px] bg-gray-900"></div>
+            </div>
             
-            <a href="about.html" class="group relative self-center md:self-start mt-2 md:mt-4 text-[11px] uppercase tracking-[0.3em] font-medium text-gray-900 pb-1 transition-colors duration-300 hover:text-gray-500">
-                More about me
-                <span class="absolute bottom-0 left-0 w-full h-[1px] overflow-hidden">
-                    <span class="absolute inset-0 w-full h-full bg-gray-900 transform transition-transform duration-500 ease-in-out group-hover:translate-x-full"></span>
-                    <span class="absolute inset-0 w-full h-full bg-gray-400 transform -translate-x-full transition-transform duration-500 ease-in-out group-hover:translate-x-0"></span>
-                </span>
-            </a>
+            <p class="text-base md:text-lg font-light leading-relaxed text-gray-600 max-w-xl">
+                What I like most about videography is meeting and collaborating with passionate people. I enjoy creating <span class="text-gray-900 font-medium">authentic and visually engaging content</span>, telling stories that highlight people, places, and experiences.
+            </p>
+
+            <div class="pt-2">
+                <a href="about.html" class="group relative inline-block text-[11px] uppercase tracking-[0.3em] font-bold text-gray-900 pb-2">
+                    More about me
+                    <span class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-200"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-gray-900 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+            </div>
         </div>
+
+        <div class="flex flex-col space-y-10">
+            <p class="text-[11px] uppercase tracking-[0.4em] text-gray-500 font-bold">I can help you with</p>
+            
+            <div class="grid grid-cols-1 gap-10">
+                <div class="flex gap-6 group">
+                    <div class="text-gray-400 group-hover:text-gray-900 transition-colors duration-300 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-sm uppercase tracking-widest font-semibold mb-2">Immersion</h3>
+                        <p class="text-sm font-light text-gray-500 leading-relaxed">Showing the unique atmosphere of your business through cinematography.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 group">
+                    <div class="text-gray-400 group-hover:text-gray-900 transition-colors duration-300 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-sm uppercase tracking-widest font-semibold mb-2">Growth</h3>
+                        <p class="text-sm font-light text-gray-500 leading-relaxed">Strategic visual storytelling designed to attract and convert customers.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 group">
+                    <div class="text-gray-400 group-hover:text-gray-900 transition-colors duration-300 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="text-sm uppercase tracking-widest font-semibold mb-2">Identity</h3>
+                        <p class="text-sm font-light text-gray-500 leading-relaxed">Building a consistent and strong visual Identity across your digital platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
+            
+            
+
 
         <!-- TESTIMONIALS -->
        <section class="bg-gray-50 py-12 md:py-24 -mx-4 md:-mx-6 px-4 md:px-6">
